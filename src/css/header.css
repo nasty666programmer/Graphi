@@ -1,0 +1,16 @@
+body{
+    margin:0 auto;
+}
+
+.headers {
+ background-color: red;
+ height: 4.5rem;
+}
+
+.logo {
+    font-weight: 900;
+    font-family: fantasy;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+}

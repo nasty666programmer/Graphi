@@ -1,0 +1,86 @@
+.UserInfo {
+    display: flex;
+    width:12rem;
+    height: 11rem;
+    align-items: center;
+    justify-self: center;
+    justify-content: space-between;
+    margin-left: 37%;
+
+   
+    
+
+}
+
+.dataUser {
+    color:black;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.dataUser span {
+    border-bottom-style: solid;
+}
+
+.containerMenu {
+    background-color: rgb(194, 194, 194);
+    height: 2.5rem;
+    width: 35rem;
+    display: flex;
+   justify-content: center;
+    margin-left: 30%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.MenuItem{
+    
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-indent: 1.5rem;
+}
+
+.FormsContainer {
+    background-color: grey;
+    width: 30rem;
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 33%;
+    margin-top: 2rem;
+    border-radius: 3%;
+}
+
+.formUserProfile {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+input {
+        width: 300px;
+        font-size: 13px;
+        padding: 6px 0 4px 10px;
+        border: 1px solid #cecece;
+        background: #F6F6f6;
+        border-radius: 8px;
+}
+
+.SomeDiv {
+    margin-top: 2rem;
+}
+
+#AddDataUser {
+    margin-top: 1rem;
+    background: -moz-linear-gradient(#00BBD6, #EBFFFF);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#00BBD6), to(#EBFFFF));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
