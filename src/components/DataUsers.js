@@ -1,44 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../css/main.css';
 import {connect} from 'react-redux';
 import Profile from './Profile';
 
 
-class DataUsers extends React.Component {
-    constructor(props){
-        super(props);
 
-        this.state = {
-            src: 'https://boostchiropractic.co.nz/wp-content/uploads/2016/09/default-user-img.jpg'
-        }
-    
-    }
-    
 
-    render(nameInput){ 
-        return(
+
+function DataUsers({nameUser}) {
+        const[userImg, setUserImg] = useState('https://boostchiropractic.co.nz/wp-content/uploads/2016/09/default-user-img.jpg')
+        let Iss = nameUser.map(nameS => <h4 class="datName">{nameS.name}</h4>)
+      
+          return (
         <div className="UserInfo">
-            
             <div className="photoUser">
-                <img src={this.state.src} height="100px" width="100px"/>
+                <img src={userImg} height="100px" width="100px"/>
             </div>
             <div className="dataUser">
-            <span>{nameInput}</span>
+            <span>{Iss}</span>
                 <br/>
-                <span>Surname</span>
+          <span>surname</span>
             </div>
         </div>
     )
 }
-}
 
 function mapStateToProps(state) {
-    console.log(state.nameInput);
+
     return {
-        nameInput:state.nameUser
-    }
+    nameUser: state.names.names
+}
 }
 
 
 
-export default connect(mapStateToProps)(DataUsers);
+
+export default connect(mapStateToProps,null)(DataUsers);

@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {createNames} from '../redux/action'
+import createName from '../redux/action'
+
 
 class Profile extends React.Component {
     constructor(props){
@@ -23,8 +24,17 @@ class Profile extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.props.createNames(); 
-        console.log( this.state.name);
+        const {name} = this.state
+        const {surname} = this.state
+        const UserDataName = {
+            name
+        }
+        this.props.createName(UserDataName);
+      
+        this.setState({
+            name:'',
+            surname: ''
+        })
 
     }
 
@@ -38,9 +48,9 @@ class Profile extends React.Component {
                         <form className="formUserProfile" onSubmit={this.handleSubmit}>
                             <label>Names</label>
                             <br />
-                            <input type="text" value={this.state.name} onChange={this.handleChange}/>
+                            <input type="text" name='name' value={this.state.name} onChange={this.handleChange}/>
                             <br />
-                            <label type="text" value={this.state.surname} onChange={this.handleChange}>Surname</label>
+                            <label type="text" name='surname'value={this.state.surname} onChange={this.handleChange}>Surname</label>
                             <br />
                             <input />
                             <div class="SomeDiv">
@@ -56,6 +66,8 @@ class Profile extends React.Component {
 }
 
 const mapDispatchToProps = {
-    createNames
+    createName,
+  
 }
-export default connect(null,mapDispatchToProps)(Profile)
+
+export default connect(null,mapDispatchToProps)(Profile);

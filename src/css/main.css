@@ -84,3 +84,23 @@ input {
     border-radius: 5px;
     border: 1px solid #666;
 }
+
+.cont_about_me {
+    width: 50rem;
+    height: 15rem;
+    margin-left: 17rem;
+    text-align: center;
+}
+
+#Author_info {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#Author_Link {
+    margin-top: 1rem;
+}
+
+.datName {
+    display: contents;
+}

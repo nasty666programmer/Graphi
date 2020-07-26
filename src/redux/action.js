@@ -1,8 +1,13 @@
 import { CREATE_NAME } from "./types";
 
-export function createNames (nameInput) {
+
+ function createName(name) {
     return {
         type: CREATE_NAME,
-        payload: nameInput
+        payload: name
     }
-} 
+}
+
+ 
+
+export default createName ;

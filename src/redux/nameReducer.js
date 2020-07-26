@@ -1,14 +1,16 @@
 import { CREATE_NAME } from "./types";
 
+
 const initialState = {
-    name:[]
+    names: [],
 }
 
  const nameReducer = (state=initialState,action) => {
-     switch(action.type) {
-         case CREATE_NAME: return {...state, name: state.name.concat([action.payload])}
-         dafault: return state
-     }
+    switch(action.type) {
+        case CREATE_NAME: return {...state,  names: state.names.concat([action.payload])}
+        default: return state
+
+    }
     return state
 }
 
